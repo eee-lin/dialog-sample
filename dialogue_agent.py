@@ -46,9 +46,11 @@ if __name__ == '__main__':
     # 実行時、このスクリプトと同じディレクトリに返答分リストreplies.csvを入れる
     with open(join(BASE_DIR, 'dialogue_agent_data/replies.csv')) as f:
         replies = f.read().split('\n')
-
-    input_text = input("入力してください： ")#'好きな食べ物は？'
-    predictions = dialogue_agent.predict([input_text])
-    # .predict()はクラスIDの配列を返すため、その0番目を取り出す
-    predicted_class_id = predictions[0]
-    print(replies[predicted_class_id])
+    print("入力してください：")
+    while True:
+        input_text = input()#'好きな食べ物は？'
+        predictions = dialogue_agent.predict([input_text])
+        # .predict()はクラスIDの配列を返すため、その0番目を取り出す
+        predicted_class_id = predictions[0]
+        print(replies[predicted_class_id])
+    
