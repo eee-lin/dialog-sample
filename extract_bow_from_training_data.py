@@ -16,4 +16,4 @@ training_texts = training_data['text']
 vectorizer = CountVectorizer(tokenizer=tokenize)
 vectorizer.fit(training_texts)
 bow = vectorizer.transform(training_texts)
-print(bow)
+# print(bow)
