@@ -72,3 +72,4 @@ neo_wakati = neo_wakati.parse(word).strip()
 print('通常辞書：' + wakati)
 print('追加辞書：' + neo_wakati)
 ```
+* [**MecabをPythonで使うまで**](https://qiita.com/Sak1361/items/47e9ec464ccc770cd65c)
